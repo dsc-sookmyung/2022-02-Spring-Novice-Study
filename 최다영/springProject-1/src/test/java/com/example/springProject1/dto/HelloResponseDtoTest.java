@@ -5,6 +5,7 @@ import com.example.springProject1.web.dto.HelloResponseDto;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class HelloResponseDtoTest {
     @Test
     public void 롬복_기능_테스트(){
