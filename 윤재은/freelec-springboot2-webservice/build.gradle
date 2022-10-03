@@ -30,6 +30,6 @@ repositories {
 //프로젝트 개발에 필요한 의존성들 선언
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
-    //compile('org.projectlombok:lombok') //롬복
+    compile('org.projectlombok:lombok') //롬복
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
