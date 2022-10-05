@@ -6,7 +6,12 @@
 *.iml
 out
 gen
-/build
+build/
+.bin
+.html
+.xml
+.css
+.idx
 
 ### Gradle template
 .gradle
