@@ -6,6 +6,8 @@
 *.iml
 out
 gen
+/build
+
 ### Gradle template
 .gradle
 **/build/
