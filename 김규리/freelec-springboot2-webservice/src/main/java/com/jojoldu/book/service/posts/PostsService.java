@@ -30,7 +30,7 @@ public class PostsService {
     }
 
     public PostsResponseDto findById(Long id) {
-        postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id))
+        Posts entity = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
 
         return new PostsResponseDto(entity);
     }
