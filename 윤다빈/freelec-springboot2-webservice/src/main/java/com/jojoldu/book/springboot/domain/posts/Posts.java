@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.domain.posts;
 
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor     // @Getter 와 @NoArgsConstructor(기본 생성자 자동 추가, public Post(){}의 효과) 는 롬복의 어노테이션으로 필수 아님
 @Entity                // JPA의 어노테이션으로 필수라 클래스에 가까이 뒀음
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
