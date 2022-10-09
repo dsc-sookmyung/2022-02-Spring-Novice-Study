@@ -1,5 +1,6 @@
 package com.jojoldu.book.freelecspringboot2webservice.domain.posts;
 
+import com.jojoldu.book.freelecspringboot2webservice.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,9 @@ import javax.persistence.*;
 @Getter //lombok
 @NoArgsConstructor //lombok
 @Entity //<< 주요 어노테이션
-public class Posts {  //실제 DB table과 매칭 될 클래스 == Entity 클래스
+public class Posts extends BaseTimeEntity {
+    //실제 DB table과 매칭 될 클래스 == Entity 클래스
+
     //id 정의
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
