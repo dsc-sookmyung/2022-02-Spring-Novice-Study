@@ -28,6 +28,7 @@ dependencies {
     annotationProcessor('org.projectlombok:lombok')
     implementation 'org.testng:testng:7.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
 }
 
 test {
