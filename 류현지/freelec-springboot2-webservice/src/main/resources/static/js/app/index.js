@@ -60,13 +60,13 @@ var main = { //main이란 객체 생성해서 function 유효 범위 선언
         var id = $('#id').val();
 
         $.ajax({
-            type: 'DELETE',
+            type: 'DELETE', <!--삭제 관련 http 메소드인 DELETE-->
             url: '/api/v1/posts/'+id,
             dataType: 'json',
             contentType:'application/json; charset=utf-8'
         }).done(function() {
             alert('글이 삭제되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/'; <!--삭제 후 메인화면으로 복귀-->
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
