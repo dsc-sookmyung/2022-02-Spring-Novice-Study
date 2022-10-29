@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RequiredArgsConstructor
 @Controller
@@ -21,5 +22,13 @@ public class IndexController {
     @GetMapping("/posts/save")//앞 슬래쉬 까먹지 말기
     public String postSave(){
         return "post-save"; //마찬가지로 URL (/posts/save) - 머스태치 파일 매핑
+    }
+
+    @GetMapping("/posts/update/{id}")
+    public String postUpdate(@PathVariable Long id, Model model) {
+        PostsResponseDto dto = postsService.findById(id);
+        model.addAttribute("post", dto);
+
+        return "posts-update";
     }
 }
