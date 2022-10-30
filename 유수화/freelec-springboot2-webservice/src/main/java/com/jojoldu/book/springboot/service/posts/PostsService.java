@@ -9,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.stream.Collectors;
+import com.jojoldu.book.springboot.web.dto.PostsListResponseDto;
 
 
 @RequiredArgsConstructor
@@ -38,5 +41,25 @@ public class PostsService {
                 .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다.  id="+id));
         return new PostsResponseDto(entity);
     }
+
+    @Transactional(readOnly=true)
+    public List<PostsListResponseDto> findAllDesc(){
+        return PostsRepository.findAllDesc().stream()
+                .map(posts -> new PostsListResponseDto(posts))
+                .collect(Collectors.toList());
+
+    }
+
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(()->
+            new IllegalArgumentException("해당 게시글이 없습니다. id"+id)
+                );
+
+        postsRepository.delete(posts);
+
+    }
+
 
 }
