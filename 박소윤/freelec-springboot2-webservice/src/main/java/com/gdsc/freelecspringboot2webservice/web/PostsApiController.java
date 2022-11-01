@@ -1,6 +1,6 @@
 package com.gdsc.freelecspringboot2webservice.web;
 
-import com.gdsc.freelecspringboot2webservice.service.posts.PostService;
+import com.gdsc.freelecspringboot2webservice.service.posts.PostsService;
 import com.gdsc.freelecspringboot2webservice.web.dto.PostsResponseDto;
 import com.gdsc.freelecspringboot2webservice.web.dto.PostsSaveRequestDto;
 import com.gdsc.freelecspringboot2webservice.web.dto.PostsUpdateRequestDto;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
-    private final PostService postsService;
+    private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
