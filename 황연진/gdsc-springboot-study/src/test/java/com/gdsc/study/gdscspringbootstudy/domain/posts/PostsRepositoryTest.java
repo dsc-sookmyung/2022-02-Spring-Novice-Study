@@ -1,6 +1,5 @@
 package com.gdsc.study.gdscspringbootstudy.domain.posts;
 
-import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
