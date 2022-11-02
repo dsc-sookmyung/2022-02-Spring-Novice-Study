@@ -32,6 +32,8 @@ dependencies {
     implementation('com.h2database:h2')
     //jpa 의존성 등록 : 스프링부트용 spring data jpa 추상화 라이브러리, jpa 관련 라이브러리 버전 관리
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    // mustache
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 
 }
