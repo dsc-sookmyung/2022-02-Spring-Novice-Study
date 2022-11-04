@@ -32,6 +32,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
 	testImplementation 'junit:junit:4.13.2'
+
+	// spring security
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	testImplementation('org.springframework.security:spring-security-test')
+
+	// session
+	implementation('org.springframework.session:spring-session-jdbc')
 }
 
 tasks.named('test') {
