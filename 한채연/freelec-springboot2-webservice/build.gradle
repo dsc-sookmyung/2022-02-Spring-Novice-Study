@@ -19,7 +19,8 @@ dependencies {
 //    implementation 'com.h2database:h2'
     implementation 'com.h2database:h2:1.4.197'
 
-    implementation 'org.springframework.boot::spring-boot-starter-oauth2-client'
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    testImplementation('org.springframework.security:spring-security-test')
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.7.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
