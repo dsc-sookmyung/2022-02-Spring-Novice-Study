@@ -1,5 +1,6 @@
 package com.example.springProject1.web;
 
+import com.example.springProject1.config.auth.LoginUser;
 import com.example.springProject1.config.auth.dto.SessionUser;
 import com.example.springProject1.service.posts.PostsService;
 import com.example.springProject1.web.dto.PostsResponseDto;
@@ -15,12 +16,12 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
+    //private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts",postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null){
             model.addAttribute("userName", user.getName());
         }
