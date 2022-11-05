@@ -28,17 +28,17 @@ public class PostsApiController {
         return postsService.findAllDesc();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
         return postsService.update(id, requestDto);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public PostsResponseDto findById(@PathVariable Long id) {
         return postsService.findById(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public Long delete(@PathVariable Long id){
         postsService.delete(id);
         return id;
