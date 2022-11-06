@@ -37,7 +37,6 @@ public class PostsApiController {
         postsService.delete(id);
         return id;
     }
-
     //목록 얻어오기
     @GetMapping("/api/v1/posts/")
     public List<PostsListResponseDto> getPostsList(){
