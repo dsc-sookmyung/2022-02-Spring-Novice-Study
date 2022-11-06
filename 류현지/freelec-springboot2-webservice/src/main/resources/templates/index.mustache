@@ -9,14 +9,14 @@
             <!--글 등록 버튼 추가; 이동할 페이지 URL = /posts/save-->
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
             <!--로그인 기능 영역-->
-            {{#userName}}
-                Logged in as: <span id="user">{{userName}}</span>
+            {{#loginUserName}}
+                Logged in as: <span id="user">{{loginUserName}}</span>
                 <a href="/logout" class="btn btn-info active" role="button">Logout</a>
-            {{/userName}}
-            {{^userName}}
+            {{/loginUserName}}
+            {{^loginUserName}}
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
                 <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
-            {{/userName}}
+            {{/loginUserName}}
         </div>
     </div>
     <br>

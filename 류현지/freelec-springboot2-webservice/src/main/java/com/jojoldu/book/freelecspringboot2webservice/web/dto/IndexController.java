@@ -27,7 +27,7 @@ public class IndexController {
 
         //user자체가 이미 SessionUser로 받아와서 바로 체크 가능
         if (user != null) { //세션에 저장된 값이 있을 경우에만 model에 userName 등록
-            model.addAttribute("userName", user.getName());
+            model.addAttribute("loginUserName", user.getName());
         }
 
         return "index"; //머스테치 플러그인 -> 앞 경로 + 뒤 파일 확장자 명 자동 생략 가능
