@@ -20,6 +20,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation('org.springframework.boot:spring-boot-starter-mustache')
+	// spring security
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	testImplementation('org.springframework.security:spring-security-test')
 }
 
 
