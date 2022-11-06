@@ -1,9 +1,10 @@
-package com.jojoldu.book.freelecspringboot2webservice.web.dto;
+package com.jojoldu.book.freelecspringboot2webservice.web;
 
 import com.jojoldu.book.freelecspringboot2webservice.config.auth.LoginUser;
 import com.jojoldu.book.freelecspringboot2webservice.config.auth.dto.SessionUser;
 import com.jojoldu.book.freelecspringboot2webservice.domain.user.User;
 import com.jojoldu.book.freelecspringboot2webservice.service.posts.PostsService;
+import com.jojoldu.book.freelecspringboot2webservice.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
