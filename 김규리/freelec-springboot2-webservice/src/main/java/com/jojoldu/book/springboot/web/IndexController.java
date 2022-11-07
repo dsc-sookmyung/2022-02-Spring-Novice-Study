@@ -10,13 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.servlet.http.HttpSession;
-
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
     private final PostsService postsService;
-    private final HttpSession httpSession;
+    //private final HttpSession httpSession; -> @LoginUser 애노테이션을 사용하여 수
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
@@ -28,15 +26,11 @@ public class IndexController {
         //CustomOAuth2UserService 에서 로그인 성공 시 세션에 SessionUser 를 저장하도록 구상
         //SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
+        //
         if (user != null){
             model.addAttribute("userName", user.getName());
         }
         return "index";
-    }
-
-    @GetMapping("/posts/save")
-    public String postSave() {
-        return "posts-save";
     }
 
     @GetMapping("/posts/update/{id}")
