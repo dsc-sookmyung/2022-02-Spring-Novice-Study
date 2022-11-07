@@ -1,4 +1,4 @@
-package com.jojoldu.book.domain.user;
+package com.jojoldu.book.springboot.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

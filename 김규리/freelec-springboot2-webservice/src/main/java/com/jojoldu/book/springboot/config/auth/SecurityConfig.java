@@ -1,7 +1,7 @@
-package com.jojoldu.book.config.auth;
+package com.jojoldu.book.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
-import com.jojoldu.book.domain.user.Role;
+import com.jojoldu.book.springboot.domain.user.Role;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
