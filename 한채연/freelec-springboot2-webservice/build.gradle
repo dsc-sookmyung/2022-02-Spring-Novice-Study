@@ -18,6 +18,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 //    implementation 'com.h2database:h2'
     implementation 'com.h2database:h2:1.4.197'
+
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    testImplementation('org.springframework.security:spring-security-test')
+
+    implementation('org.springframework.session:spring-session-jdbc')
+    testImplementation('org.springframework.security:spring-security-test')  // 임의로 인증된 사용자를 추가하기 위해
+
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.7.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.7.0'
