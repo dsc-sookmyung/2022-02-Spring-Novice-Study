@@ -1,5 +1,7 @@
 package com.jojoldu.book.domain.posts;
 
+import com.jojoldu.book.springboot.domain.posts.PostRepository;
+import com.jojoldu.book.springboot.domain.posts.Posts;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
