@@ -1,7 +1,5 @@
 package com.jojoldu.book.springboot.domain.posts;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
-import com.jojoldu.book.springboot.domain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
