@@ -1,6 +1,5 @@
 package com.example.springProject1.dto;
 
-import com.example.springProject1.web.HelloController;
 import com.example.springProject1.web.dto.HelloResponseDto;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;

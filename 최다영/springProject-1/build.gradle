@@ -22,6 +22,9 @@ dependencies {
 	implementation 'com.h2database:h2:1.4.197'
 	runtimeOnly 'com.h2database:h2:1.4.197'
 	implementation('org.springframework.boot:spring-boot-starter-mustache')
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	testImplementation('org.springframework.security:spring-security-test')
+	implementation('org.springframework.session:spring-session-jdbc')
 
 }
 
