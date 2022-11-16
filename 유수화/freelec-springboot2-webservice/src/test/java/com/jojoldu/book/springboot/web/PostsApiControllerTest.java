@@ -1,10 +1,9 @@
 package com.jojoldu.book.springboot.web;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
-import com.jojoldu.book.springboot.domain.posts.PostsRepository;
-import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
-import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
-import org.aspectj.lang.annotation.After;
+import springboot.domain.posts.Posts;
+import springboot.domain.posts.PostsRepository;
+import springboot.web.dto.PostsSaveRequestDto;
+import springboot.web.dto.PostsUpdateRequestDto;
 
 import org.junit.jupiter.api.AfterEach; //교재에는 After로 나와있음
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
+//import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.boot.web.server.LocalServerPort;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;

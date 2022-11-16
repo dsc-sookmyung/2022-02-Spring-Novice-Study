@@ -1,6 +1,6 @@
 
 
-package com.jojoldu.book.springboot.web.dto;
+package springboot.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
