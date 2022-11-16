@@ -1,6 +1,6 @@
-package com.jojoldu.book.springboot.web.dto;
+package springboot.web.dto;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
+import springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

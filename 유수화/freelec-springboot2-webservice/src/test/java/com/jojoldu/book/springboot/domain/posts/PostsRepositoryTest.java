@@ -6,8 +6,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import springboot.domain.posts.Posts;
+import springboot.domain.posts.PostsRepository;
 
-import java.nio.channels.Pipe;
 import java.time.LocalDateTime;
 import java.util.List;
 
