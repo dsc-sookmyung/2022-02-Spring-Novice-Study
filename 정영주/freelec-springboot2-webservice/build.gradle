@@ -39,6 +39,8 @@ dependencies {
     testImplementation('org.springframework.security:spring-security-test')
     // session
     implementation('org.springframework.session:spring-session-jdbc')
+    //MariaDB등록
+    implementation('org.mariadb.jdbc:mariadb-java-client')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 
 }
