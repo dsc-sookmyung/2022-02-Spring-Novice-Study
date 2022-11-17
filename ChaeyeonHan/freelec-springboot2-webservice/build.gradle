@@ -36,6 +36,8 @@ dependencies {
     implementation 'org.testng:testng:7.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 }
 
 test {
