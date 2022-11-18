@@ -60,7 +60,7 @@ public class PostsApiControllerTest {
 
     @Test
     @WithMockUser(roles = "USER")
-    public void Posts_are_posted() throws Exception {
+    public void Posts_등록된다() throws Exception {
         String title = "title";
         String content = "content";
         PostsSaveRequestDto requestDto = PostsSaveRequestDto
@@ -71,14 +71,6 @@ public class PostsApiControllerTest {
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts";
-
-        ResponseEntity<Long> responseEntity = restTemplate
-                .postForEntity(url, requestDto, Long.class);
-
-        assertThat(responseEntity.getStatusCode())
-                .isEqualTo(HttpStatus.OK);
-        assertThat(responseEntity.getBody())
-                .isGreaterThan(0L);
 
         //when
         mvc.perform(post(url)
@@ -94,7 +86,7 @@ public class PostsApiControllerTest {
 
     @Test
     @WithMockUser(roles = "USER")
-    public void Posts_are_modified() throws Exception {
+    public void Posts_수정된다() throws Exception {
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
@@ -111,14 +103,6 @@ public class PostsApiControllerTest {
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
-
-        HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
-
-        ResponseEntity<Long> responseEntity =
-                restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
-
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         //when
         mvc.perform(put(url)
