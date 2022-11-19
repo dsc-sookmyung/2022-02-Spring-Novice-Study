@@ -1,4 +1,3 @@
-
 plugins {
 	id 'org.springframework.boot' version '2.6.7'
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
@@ -8,6 +7,10 @@ plugins {
 group = 'com.jojoldu.book'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+jar {
+	enabled = false
+}
 
 repositories {
 	mavenCentral()
@@ -34,6 +37,4 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-jar {
-	enabled = false
-}
+
