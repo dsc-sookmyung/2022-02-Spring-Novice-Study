@@ -27,7 +27,7 @@ dependencies {
 	// session - DB를 세션 저장소로 사용
 	implementation 'org.springframework.session:spring-session-jdbc'
 	//MariaDB 드라이버 등록
-	compile 'org.mariadb.jdbc:mariadb-java-client'
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 tasks.named('test') {
