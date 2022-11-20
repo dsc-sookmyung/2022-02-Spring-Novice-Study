@@ -43,6 +43,9 @@ dependencies {
 
     // session
     implementation('org.springframework.session:spring-session-jdbc')
+
+    //8장(MaridDB 드라이버 등록)
+    implementation('org.mariadb.jdbc:mariadb-java-client')
 }
 
 test {
@@ -55,4 +58,3 @@ jar {
     enabled = false
 }
 
-implimentation 'org.mariadb.jdbc:mariadb-java-client'
