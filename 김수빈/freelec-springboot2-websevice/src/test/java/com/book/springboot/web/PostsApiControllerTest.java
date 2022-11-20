@@ -100,7 +100,7 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
 
     }
-
+/*
     @Test
     @WithMockUser(roles="USER")
     public void Posts_수정된다() throws Exception {
@@ -140,5 +140,5 @@ public class PostsApiControllerTest {
 
     }
 
-
+*/
 }
