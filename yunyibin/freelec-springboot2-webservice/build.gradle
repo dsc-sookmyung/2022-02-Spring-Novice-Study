@@ -22,6 +22,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -34,8 +35,6 @@ dependencies {
     implementation('org.springframework.session:spring-session-jdbc')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation('org.springframework.security:spring-security-test')
-}
 
-test {
-    useJUnitPlatform()
+    annotationProcessor('org.projectlombok:lombok')
 }
