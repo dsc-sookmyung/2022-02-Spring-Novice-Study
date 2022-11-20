@@ -1,0 +1,49 @@
+
+
+plugins {
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+group = 'com.spring-study'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    //3장
+    //implementation 'org.springframework.boot:spring-boot-starter-web'
+    //implementation 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //implementation 'com.h2database:h2' 버전 수정하기
+    implementation 'com.h2database:h2:1.4.197'
+    //testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //4장
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    //5장
+    // spring security
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    testImplementation('org.springframework.security:spring-security-test')
+
+    // session
+    implementation('org.springframework.session:spring-session-jdbc')
+}
+
+test {
+    useJUnitPlatform()
+}
