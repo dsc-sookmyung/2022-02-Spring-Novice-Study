@@ -11,6 +11,7 @@ version '1.0-SNAPSHOT'
 
 group = 'com.spring-study'
 version = '0.0.1-SNAPSHOT'
+// Java 소스를 컴파일할 때 사용할 Java 버전
 sourceCompatibility = '14'
 
 repositories {
@@ -47,3 +48,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+//8장
+//-plain.jar를 생성하지 않기 위해
+jar {
+    enabled = false
+}
+
+implimentation 'org.mariadb.jdbc:mariadb-java-client'
