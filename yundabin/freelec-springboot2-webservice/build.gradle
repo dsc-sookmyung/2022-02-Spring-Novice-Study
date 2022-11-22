@@ -17,7 +17,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group 'com.jojoldu.book'
-version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
+version '1.0.4-SNAPSHOT-'
 sourceCompatibility = 1.8   
 
 repositories {
@@ -34,6 +34,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client') // 권한 관련, 소셜 기능 구현시 필요
     implementation('org.springframework.session:spring-session-jdbc')
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'// 권한 관련
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation("org.springframework.security:spring-security-test") // 권한 관련
