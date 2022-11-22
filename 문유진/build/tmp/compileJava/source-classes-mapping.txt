@@ -2,20 +2,20 @@ com/jojoldu/book/springboot/config/auth/SecurityConfig.java
  com.jojoldu.book.springboot.config.auth.SecurityConfig
 com/jojoldu/book/springboot/Application.java
  com.jojoldu.book.springboot.Application
-com/jojoldu/book/springboot/config/auth/CustomOAuth2UserService.java
- com.jojoldu.book.springboot.config.auth.CustomOAuth2UserService
 com/jojoldu/book/springboot/config/auth/dto/OAuthAttributes.java
  com.jojoldu.book.springboot.config.auth.dto.OAuthAttributes
  com.jojoldu.book.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/jojoldu/book/springboot/config/auth/CustomOAuth2UserService.java
+ com.jojoldu.book.springboot.config.auth.CustomOAuth2UserService
 com/jojoldu/book/springboot/web/dto/PostsUpdateRequestDto.java
  com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto
  com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
-com/jojoldu/book/springboot/domain/posts/PostsRepository.java
- com.jojoldu.book.springboot.domain.posts.PostsRepository
 com/jojoldu/book/springboot/web/dto/PostsResponseDto.java
  com.jojoldu.book.springboot.web.dto.PostsResponseDto
 com/jojoldu/book/springboot/web/PostsApiController.java
  com.jojoldu.book.springboot.web.PostsApiController
+com/jojoldu/book/springboot/domain/posts/PostsRepository.java
+ com.jojoldu.book.springboot.domain.posts.PostsRepository
 com/jojoldu/book/springboot/web/dto/PostsSaveRequestDto.java
  com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto
  com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
@@ -25,10 +25,10 @@ com/jojoldu/book/springboot/config/auth/dto/SessionUser.java
  com.jojoldu.book.springboot.config.auth.dto.SessionUser
 com/jojoldu/book/springboot/config/auth/LoginUserArgumentResolver.java
  com.jojoldu.book.springboot.config.auth.LoginUserArgumentResolver
-com/jojoldu/book/springboot/domain/user/UserRepository.java
- com.jojoldu.book.springboot.domain.user.UserRepository
 com/jojoldu/book/springboot/domain/BaseTimeEntity.java
  com.jojoldu.book.springboot.domain.BaseTimeEntity
+com/jojoldu/book/springboot/domain/user/UserRepository.java
+ com.jojoldu.book.springboot.domain.user.UserRepository
 com/jojoldu/book/springboot/web/dto/HelloResponseDto.java
  com.jojoldu.book.springboot.web.dto.HelloResponseDto
 com/jojoldu/book/springboot/config/WebConfig.java
