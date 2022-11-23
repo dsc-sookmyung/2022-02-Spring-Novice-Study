@@ -32,6 +32,8 @@ dependencies {
 
 	// session
 	implementation 'org.springframework.session:spring-session-jdbc'
+
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 tasks.named('test') {
