@@ -1,3 +1,4 @@
 .gradle
 .idea
 /src/main/java/org/example/
+application-oauth.properties
