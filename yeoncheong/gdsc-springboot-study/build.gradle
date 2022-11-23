@@ -6,10 +6,14 @@ plugins {
 
 group = 'com.gdsc.study'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '14'
+sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+}
+
+jar {
+	enabled = false
 }
 
 dependencies {
@@ -39,6 +43,9 @@ dependencies {
 
 	// session
 	implementation('org.springframework.session:spring-session-jdbc')
+
+	//MariaDB
+	implementation("org.mariadb.jdbc:mariadb-java-client")
 }
 
 tasks.named('test') {
