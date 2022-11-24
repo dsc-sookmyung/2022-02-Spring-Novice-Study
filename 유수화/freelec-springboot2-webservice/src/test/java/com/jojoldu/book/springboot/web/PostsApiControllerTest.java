@@ -1,9 +1,9 @@
 package com.jojoldu.book.springboot.web;
 
-import springboot.domain.posts.Posts;
-import springboot.domain.posts.PostsRepository;
-import springboot.web.dto.PostsSaveRequestDto;
-import springboot.web.dto.PostsUpdateRequestDto;
+import com.jojoldu.book.springboot.domain.posts.Posts;
+import com.jojoldu.book.springboot.domain.posts.PostsRepository;
+import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
+import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
 
 import org.junit.jupiter.api.AfterEach; //교재에는 After로 나와있음
 import org.junit.jupiter.api.Test;
