@@ -10,6 +10,7 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -18,20 +19,27 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation('org.springframework.boot:spring-boot-starter-web')
+
+    annotationProcessor("org.projectlombok:lombok")
+    implementation('org.projectlombok:lombok')
+    implementation("org.mariadb.jdbc:mariadb-java-client")
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+    // mustache
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.1'
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
+    testImplementation('org.springframework.security:spring-security-test')
 }
 
-test {
-    useJUnitPlatform()
-}

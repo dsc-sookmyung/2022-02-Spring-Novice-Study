@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+	id 'java'
+}
+
+group = 'com.jojoldu.book'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.h2database:h2'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation('org.springframework.boot:spring-boot-starter-mustache')
+	// spring security
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	testImplementation('org.springframework.security:spring-security-test')
+	// session - DB를 세션 저장소로 사용
+	implementation 'org.springframework.session:spring-session-jdbc'
+	//MariaDB 드라이버 등록
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+jar {
+	enabled = false
+}
+
+

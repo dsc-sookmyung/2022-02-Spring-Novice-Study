@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jojoldu.book.springboot.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-18T17:06:02" hostname="LAPTOP-F2DV4LV4" time="0.076">
+  <properties/>
+  <testcase name="롬복_기능_테스트" classname="com.jojoldu.book.springboot.web.dto.HelloResponseDtoTest" time="0.076"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
