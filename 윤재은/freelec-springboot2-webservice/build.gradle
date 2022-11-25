@@ -25,7 +25,6 @@ sourceCompatibility = 1.8
 //라이브라리들을 어떤 원격 저장소에서 받을지 결정
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 //프로젝트 개발에 필요한 의존성들 선언

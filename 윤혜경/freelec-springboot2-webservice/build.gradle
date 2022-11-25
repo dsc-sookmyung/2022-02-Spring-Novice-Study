@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+	id 'java'
+}
+
+group = 'com.jojoldu.book'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.projectlombok:lombok'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'com.h2database:h2:1.4.197'
+
+	implementation 'org.springframework.boot:spring-boot-starter-mustache'
+
+	// spring security
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	// session
+	implementation 'org.springframework.session:spring-session-jdbc'
+
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
