@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.4'
+	id 'org.springframework.boot' version '2.6.7'
 	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
 }
@@ -14,7 +14,18 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//implementation'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'com.h2database:h2:1.4.197'
+	runtimeOnly 'com.h2database:h2:1.4.197'
+	implementation('org.springframework.boot:spring-boot-starter-mustache')
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	testImplementation('org.springframework.security:spring-security-test')
+	implementation('org.springframework.session:spring-session-jdbc')
+
 }
 
 tasks.named('test') {
