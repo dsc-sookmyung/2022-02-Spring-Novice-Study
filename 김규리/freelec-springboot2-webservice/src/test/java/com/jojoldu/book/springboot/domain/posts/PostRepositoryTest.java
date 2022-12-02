@@ -1,7 +1,5 @@
-package com.jojoldu.book.domain.posts;
+package com.jojoldu.book.springboot.domain.posts;
 
-import com.jojoldu.book.springboot.domain.posts.PostRepository;
-import com.jojoldu.book.springboot.domain.posts.Posts;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
@@ -18,11 +16,11 @@ import java.util.List;
 public class PostRepositoryTest {
 
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postsRepository;
 
     @After
     public void cleanup() {
-        postRepository.deleteAll();
+        postsRepository.deleteAll();
     }
 
     @Test
@@ -31,14 +29,14 @@ public class PostRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postRepository.save(Posts.builder()
+        postsRepository.save(Posts.builder()
                 .title(title)
                 .content(content)
                 .author("jojoldu@gmail.com")
                 .build());
 
         //when
-        List<Posts> postsList = postRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll();
 
         //then
         Posts posts = postsList.get(0);
@@ -51,14 +49,14 @@ public class PostRepositoryTest {
     public void BaseTimeEntity_등록() {
         //given
         LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
-        postRepository.save(Posts.builder()
+        postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
                 .author("author")
                 .build());
 
         //when
-        List<Posts> postsList = postRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll();
 
         //then
         Posts posts = postsList.get(0);
