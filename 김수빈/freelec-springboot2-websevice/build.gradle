@@ -1,0 +1,60 @@
+
+
+plugins {
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+group = 'com.spring-study'
+version = '0.0.1-SNAPSHOT'
+// Java 소스를 컴파일할 때 사용할 Java 버전
+sourceCompatibility = '14'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    //3장
+    //implementation 'org.springframework.boot:spring-boot-starter-web'
+    //implementation 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //implementation 'com.h2database:h2' 버전 수정하기
+    implementation 'com.h2database:h2:1.4.197'
+    //testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //4장
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    //5장
+    // spring security
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    testImplementation('org.springframework.security:spring-security-test')
+
+    // session
+    implementation('org.springframework.session:spring-session-jdbc')
+
+    //8장(MaridDB 드라이버 등록)
+    implementation('org.mariadb.jdbc:mariadb-java-client')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//8장
+//-plain.jar를 생성하지 않기 위해
+jar {
+    enabled = false
+}
+
